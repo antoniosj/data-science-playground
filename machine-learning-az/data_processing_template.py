@@ -40,4 +40,6 @@ X = oneHotEncoder.fit_transform(X).toarray()
 labelEncoder_Y = LabelEncoder()
 # como essa coluna só são dois valores (0 e 1) não precisa do onehotencoder.
 Y = labelEncoder_Y.fit_transform(Y)
-
+# Splitting the dataset into training set and Test set
+from sklearn.model_selection import train_test_split
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, random_state = 0)
